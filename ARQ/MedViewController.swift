@@ -12,14 +12,13 @@ var global_med_array = ["Methotrexate"]
 
 class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var table_view: UITableView!
     
     @IBAction func medPopUp(_ sender: UIButton) {
        
         //1. Create the alert controller.
         let alert = UIAlertController(title: "Add Medication", message: "", preferredStyle: .alert)
-        
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
@@ -45,7 +44,6 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +58,6 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return global_med_array.count
@@ -90,16 +87,16 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 112
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onDoneButtonClick(_ sender: Any) {
+        // save medication name
+        let data: DailyData = DailyData()
+        for med in global_med_array {
+            
+        }
+        var index = NSIndexPath.init(index: 1)
+        data.setMedicationNames(medications: global_med_array)
+        data.saveData()
     }
-    */
 
 }

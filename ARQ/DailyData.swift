@@ -22,6 +22,18 @@ class DailyData {
         print("Just set general: " + String(general))
     }
     
+    func setMedicationNames(medications: [String]) {
+        UserDefaults.standard.set(medications, forKey: "medications")
+        print("Just set medications:")
+        dump(medications)
+    }
+    
+    func setMedicationDoses(doses: [Int]) {
+        UserDefaults.standard.set(doses, forKey: "doses")
+        print("Just set dosages:")
+        dump(doses)
+    }
+    
     func saveData() {
         let stiffness = UserDefaults.standard.value(forKey: "stiffness") as! Int
         let general = UserDefaults.standard.value(forKey: "general") as! Int

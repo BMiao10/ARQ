@@ -232,12 +232,13 @@
                                 <rect key="frame" x="214" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
+                                    <action selector="onDoneButtonClick:" destination="657-Go-fUa" eventType="touchUpInside" id="bOV-Zy-rVE"/>
                                     <segue destination="7Gu-N3-8P6" kind="show" id="N7p-1U-W9O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vp-lk-JoH">
                                 <rect key="frame" x="61" y="532" width="253" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <state key="normal" title="Button" image="new-med-button"/>
                                 <connections>
                                     <action selector="medPopUp:" destination="657-Go-fUa" eventType="touchUpInside" id="ciT-3u-Shn"/>
@@ -245,7 +246,7 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-Xn-rtL">
                                 <rect key="frame" x="0.0" y="121" width="375" height="403"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="112" id="EN0-M3-Bl9" customClass="CustomTableViewCell" customModule="ARQ" customModuleProvider="target">
@@ -311,6 +312,7 @@
                         <viewLayoutGuide key="safeArea" id="wPr-81-KKC"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="rQj-di-lfm" id="uBU-7R-k4r"/>
                         <outlet property="table_view" destination="4gS-Xn-rtL" id="k9M-5A-mmS"/>
                     </connections>
                 </viewController>
@@ -484,7 +486,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="nXb-rI-TpN"/>
         <segue reference="1jf-bC-C6R"/>
-        <segue reference="z2W-J9-cNk"/>
+        <segue reference="g9C-s4-zbh"/>
         <segue reference="1Cn-Y0-plb"/>
         <segue reference="JhT-wm-i3G"/>
         <segue reference="hlx-qC-7EE"/>
