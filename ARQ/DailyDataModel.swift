@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DailyDataModel: NSObject {
+class DailyDataModel: NSObject, NSCoding {
     var stiffnessValue: Int!
     var depressionBool: Bool!
     
@@ -29,13 +29,27 @@ class DailyDataModel: NSObject {
         if let stiffnessObject = decoder.decodeObject(forKey: PropertyKeys.stiffness) as? Int {
             stiffnessValue = stiffnessObject
         }
+        
         if let depressionObject = decoder.decodeObject(forKey: PropertyKeys.depression) as? Bool {
             depressionBool = depressionObject
         }
     }
     
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encode(stiffnessValue, forKey: PropertyKeys.stiffness)
+        aCoder.encode(depressionBool, forKey: PropertyKeys.depression)
+    }
+    
     func encode(with coder: NSCoder) {
         coder.encode(stiffnessValue, forKey: PropertyKeys.stiffness)
         coder.encode(depressionBool, forKey: PropertyKeys.depression)
+    }
+    
+    func getStiffnessValue() -> Int {
+        return stiffnessValue
+    }
+    
+    func getDepBool() -> Bool {
+        return depressionBool
     }
 }

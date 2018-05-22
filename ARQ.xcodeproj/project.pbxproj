@@ -12,6 +12,7 @@
 		2B7B91F020B232BC00B2EA07 /* DailyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B91EF20B232BC00B2EA07 /* DailyDataModel.swift */; };
 		2B7B91F220B23DE400B2EA07 /* DailyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B91F120B23DE400B2EA07 /* DailyData.swift */; };
 		2B7B91F420B241AE00B2EA07 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B91F320B241AE00B2EA07 /* DataStorage.swift */; };
+		2B7B91F820B396B000B2EA07 /* GeneralDepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B91F720B396B000B2EA07 /* GeneralDepViewController.swift */; };
 		40366FBC20A4E3150097E02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40366FBB20A4E3150097E02F /* Assets.xcassets */; };
 		4090FB8120A7E1220065777B /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090FB8020A7E1220065777B /* popUpViewController.swift */; };
 		40D2E21420AA2EA1007797FF /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */; };
@@ -47,6 +48,7 @@
 		2B7B91EF20B232BC00B2EA07 /* DailyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDataModel.swift; sourceTree = "<group>"; };
 		2B7B91F120B23DE400B2EA07 /* DailyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyData.swift; sourceTree = "<group>"; };
 		2B7B91F320B241AE00B2EA07 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		2B7B91F720B396B000B2EA07 /* GeneralDepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralDepViewController.swift; sourceTree = "<group>"; };
 		40366FBB20A4E3150097E02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4090FB8020A7E1220065777B /* popUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpViewController.swift; sourceTree = "<group>"; };
 		40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				2B7B91F120B23DE400B2EA07 /* DailyData.swift */,
 				2B7B91EF20B232BC00B2EA07 /* DailyDataModel.swift */,
 				40E9602D2097D51400C61A36 /* Main.storyboard */,
+				2B7B91F720B396B000B2EA07 /* GeneralDepViewController.swift */,
 				2B7B91ED20ACB1C100B2EA07 /* GeneralLogViewController.swift */,
 				40E960322097D51900C61A36 /* LaunchScreen.storyboard */,
 				40E960352097D51900C61A36 /* Info.plist */,
@@ -286,6 +289,7 @@
 				2B7B91EE20ACB1C100B2EA07 /* GeneralLogViewController.swift in Sources */,
 				4090FB8120A7E1220065777B /* popUpViewController.swift in Sources */,
 				2B7B91F020B232BC00B2EA07 /* DailyDataModel.swift in Sources */,
+				2B7B91F820B396B000B2EA07 /* GeneralDepViewController.swift in Sources */,
 				40E9602C2097D51400C61A36 /* ViewController.swift in Sources */,
 				2B7B91EC20ACB12D00B2EA07 /* LeftHandViewController.swift in Sources */,
 				40D942B920A9E3AD00E32FEA /* CustomTableViewCell.swift in Sources */,

@@ -13,5 +13,5 @@ class DataStorage {
     
     private init() {}
     
-    var UserData : [DailyDataModel] = []
+    var userData : [DailyDataModel] = []
 }

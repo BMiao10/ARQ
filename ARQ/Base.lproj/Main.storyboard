@@ -242,7 +242,7 @@
         <!--General2-LogView-->
         <scene sceneID="7KT-Si-xwT">
             <objects>
-                <viewController id="eES-dd-nYQ" userLabel="General2-LogView" sceneMemberID="viewController">
+                <viewController id="eES-dd-nYQ" userLabel="General2-LogView" customClass="GeneralDepViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YR8-01-wc2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,6 +273,7 @@
                                 <rect key="frame" x="214" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="onClick:" destination="eES-dd-nYQ" eventType="touchUpInside" id="fxi-zc-jAD"/>
                                     <segue destination="657-Go-fUa" kind="show" animates="NO" id="BcK-qD-Xlh"/>
                                 </connections>
                             </button>
@@ -288,6 +289,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oYe-Du-CyH"/>
                     </view>
+                    <connections>
+                        <outlet property="depButton" destination="Gsp-Vo-Rr0" id="MY1-5Q-F9L"/>
+                        <outlet property="nextButton" destination="3K4-QT-0Vx" id="YIY-KD-MSs"/>
+                        <outlet property="view" destination="YR8-01-wc2" id="pwD-I7-Ceu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0f-OP-lN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,7 +328,7 @@
                                 <rect key="frame" x="214" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onNextButtonClick:" destination="Dxg-Ne-oiy" eventType="touchUpInside" id="S4X-5W-6RZ"/>
+                                    <action selector="onNextButtonClick:" destination="Dxg-Ne-oiy" eventType="touchUpInside" id="Tby-u5-oEs"/>
                                     <segue destination="eES-dd-nYQ" kind="show" animates="NO" id="z2W-J9-cNk"/>
                                 </connections>
                             </button>
@@ -336,11 +342,9 @@
                         <viewLayoutGuide key="safeArea" id="IMJ-FV-YQn"/>
                     </view>
                     <connections>
-                        <outlet property="generalSlider" destination="Oq7-3E-4I9" id="Rdw-li-jfB"/>
+                        <outlet property="generalSlider" destination="P1s-bf-nZh" id="l42-vH-KpI"/>
                         <outlet property="nextButton" destination="W64-XX-9Sn" id="Coa-wK-FhY"/>
-                        <outlet property="onNextButtonClick" destination="W64-XX-9Sn" id="IDW-wN-1uQ"/>
-                        <outlet property="slider" destination="Oq7-3E-4I9" id="B0H-ed-wXm"/>
-                        <outlet property="stiffnessSlider" destination="P1s-bf-nZh" id="0Y5-3b-fNt"/>
+                        <outlet property="stiffnessSlider" destination="Oq7-3E-4I9" id="29R-UD-Lew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7l-jy-mp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -396,11 +400,11 @@
         <image name="view-background" width="1242" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0QL-OW-Zw0"/>
-        <segue reference="1jf-bC-C6R"/>
-        <segue reference="g9C-s4-zbh"/>
+        <segue reference="nXb-rI-TpN"/>
+        <segue reference="OjO-OH-9g8"/>
+        <segue reference="z2W-J9-cNk"/>
         <segue reference="JhT-wm-i3G"/>
-        <segue reference="Nhg-EF-4uP"/>
-        <segue reference="UB9-2a-Rc6"/>
+        <segue reference="hlx-qC-7EE"/>
+        <segue reference="N7p-1U-W9O"/>
     </inferredMetricsTieBreakers>
 </document>

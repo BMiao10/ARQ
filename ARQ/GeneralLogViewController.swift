@@ -13,18 +13,18 @@ class GeneralLogViewController: UIViewController {
     @IBOutlet weak var stiffnessSlider: UISlider!
     @IBOutlet weak var generalSlider: UISlider!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func onNextButtonClick(_ sender: Any) {
-        
+        let stiffness = round(stiffnessSlider.value)
+        let data: DailyData = DailyData()
+        data.setStiffness(stiffness: Int(stiffness))
     }
-    
 }
