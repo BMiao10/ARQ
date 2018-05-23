@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -394,7 +394,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-bf-nZh" userLabel="log-stiffness">
-                                <rect key="frame" x="53" y="455" width="259" height="30"/>
+                                <rect key="frame" x="51" y="455" width="272" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.89562621269999998" green="0.4045359094" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
@@ -424,9 +424,9 @@
                         <viewLayoutGuide key="safeArea" id="IMJ-FV-YQn"/>
                     </view>
                     <connections>
-                        <outlet property="generalSlider" destination="P1s-bf-nZh" id="l42-vH-KpI"/>
+                        <outlet property="generalSlider" destination="Oq7-3E-4I9" id="fTk-G2-aG1"/>
                         <outlet property="nextButton" destination="W64-XX-9Sn" id="Coa-wK-FhY"/>
-                        <outlet property="stiffnessSlider" destination="Oq7-3E-4I9" id="29R-UD-Lew"/>
+                        <outlet property="stiffnessSlider" destination="P1s-bf-nZh" id="uXi-an-qC5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7l-jy-mp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -487,9 +487,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="0QL-OW-Zw0"/>
         <segue reference="OjO-OH-9g8"/>
-        <segue reference="g9C-s4-zbh"/>
+        <segue reference="z2W-J9-cNk"/>
         <segue reference="1Cn-Y0-plb"/>
-        <segue reference="0gO-fH-P6c"/>
+        <segue reference="JhT-wm-i3G"/>
         <segue reference="hlx-qC-7EE"/>
         <segue reference="WaC-mm-AKq"/>
         <segue reference="N7p-1U-W9O"/>
