@@ -8,8 +8,7 @@
 
 import UIKit
 
-class LeftHandViewController: UIViewController {
-    @IBOutlet weak var image: UIImageView!
+class HandsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
