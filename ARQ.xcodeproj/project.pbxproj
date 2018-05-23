@@ -16,6 +16,7 @@
 		40366FBC20A4E3150097E02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40366FBB20A4E3150097E02F /* Assets.xcassets */; };
 		4042ABDE20B381CA0022AA0D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042ABDD20B381CA0022AA0D /* SendViewController.swift */; };
 		4042ABE020B509B60022AA0D /* MedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042ABDF20B509B60022AA0D /* MedViewController.swift */; };
+		4042ABE120B51A2F0022AA0D /* DailyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B91F120B23DE400B2EA07 /* DailyData.swift */; };
 		4090FB8120A7E1220065777B /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090FB8020A7E1220065777B /* popUpViewController.swift */; };
 		40D2E21420AA2EA1007797FF /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */; };
 		40D942B920A9E3AD00E32FEA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D942B820A9E3AD00E32FEA /* CustomTableViewCell.swift */; };
@@ -119,11 +120,15 @@
 		40E960282097D51400C61A36 /* ARQ */ = {
 			isa = PBXGroup;
 			children = (
+				2B7B91F120B23DE400B2EA07 /* DailyData.swift */,
 				40366FBB20A4E3150097E02F /* Assets.xcassets */,
 				40E960292097D51400C61A36 /* AppDelegate.swift */,
 				40E9602B2097D51400C61A36 /* ViewController.swift */,
 				2B7B91F320B241AE00B2EA07 /* DataStorage.swift */,
+<<<<<<< HEAD
 				2B0775AA20B51C7B00DE5613 /* DailyData.swift */,
+=======
+>>>>>>> 5cd5858b2d0273d828f8fcb6cb054ce2c644b2cc
 				2B7B91EF20B232BC00B2EA07 /* DailyDataModel.swift */,
 				40E9602D2097D51400C61A36 /* Main.storyboard */,
 				2B7B91F720B396B000B2EA07 /* GeneralDepViewController.swift */,
@@ -295,6 +300,7 @@
 				2B7B91EE20ACB1C100B2EA07 /* GeneralLogViewController.swift in Sources */,
 				4090FB8120A7E1220065777B /* popUpViewController.swift in Sources */,
 				2B0775AB20B51C7B00DE5613 /* DailyData.swift in Sources */,
+				4042ABE120B51A2F0022AA0D /* DailyData.swift in Sources */,
 				2B7B91F020B232BC00B2EA07 /* DailyDataModel.swift in Sources */,
 				2B7B91F820B396B000B2EA07 /* GeneralDepViewController.swift in Sources */,
 				40E9602C2097D51400C61A36 /* ViewController.swift in Sources */,
