@@ -49,11 +49,7 @@ class LeftHandViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is RightHandViewController
-        {
-            let vc = segue.destination as? RightHandViewController
-            vc?.joints = joints
-        }
+        
     }
     
     override func viewDidLoad() {
