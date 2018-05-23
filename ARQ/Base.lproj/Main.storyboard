@@ -450,18 +450,10 @@
         <image name="view-background" width="1242" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="nXb-rI-TpN"/>
         <segue reference="OjO-OH-9g8"/>
         <segue reference="z2W-J9-cNk"/>
         <segue reference="JhT-wm-i3G"/>
-=======
-        <segue reference="0QL-OW-Zw0"/>
-        <segue reference="1jf-bC-C6R"/>
-        <segue reference="g9C-s4-zbh"/>
-        <segue reference="SI8-dg-T1h"/>
-        <segue reference="0gO-fH-P6c"/>
->>>>>>> af9982c02d495881f6292a33f69e4930a4f4ea23
         <segue reference="hlx-qC-7EE"/>
         <segue reference="N7p-1U-W9O"/>
     </inferredMetricsTieBreakers>
