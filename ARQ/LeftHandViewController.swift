@@ -9,7 +9,52 @@
 import UIKit
 
 class LeftHandViewController: UIViewController {
-    @IBOutlet weak var image: UIImageView!
+    
+    var joints:Int = 0
+
+    @IBAction func clickPainButton(_ sender: UIButton) {
+        changePainButton(withImage: UIImage(named: "pain-unselected")!, on: sender)
+    }
+    
+    func changePainButton(withImage currState: UIImage, on button: UIButton) {
+        if button.currentImage == UIImage(named: "pain-unselected")  {
+            button.setImage(UIImage(named : "pain-selected"), for: UIControlState.normal)
+            joints+=1
+            print(joints)
+        }
+        else {
+            button.setImage(UIImage(named : "pain-unselected"), for: UIControlState.normal)
+            joints-=1
+            print(joints)
+        }
+    }
+    
+    
+    @IBAction func clickSwellingButton(_ sender: UIButton) {
+        changeSwellingButton(withImage: UIImage(named: "pain-unselected")!, on: sender)
+    }
+    
+    func changeSwellingButton(withImage currState: UIImage, on button: UIButton) {
+        if button.currentImage == UIImage(named: "swelling-unselected")  {
+            button.setImage(UIImage(named : "swelling-selected"), for: UIControlState.normal)
+            joints+=1
+            print(joints)
+        }
+        else {
+            button.setImage(UIImage(named : "swelling-unselected"), for: UIControlState.normal)
+            joints-=1
+            print(joints)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is RightHandViewController
+        {
+            let vc = segue.destination as? RightHandViewController
+            vc?.joints = joints
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
