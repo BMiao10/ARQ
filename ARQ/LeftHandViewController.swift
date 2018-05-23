@@ -1,5 +1,5 @@
 //
-//  RightHandViewController.swift
+//  LeftHandViewController.swift
 //  ARQ
 //
 //  Created by Brenda Miao on 5/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RightHandViewController: UIViewController {
+class LeftHandViewController: UIViewController {
     
     var joints:Int = 0
     
@@ -16,11 +16,20 @@ class RightHandViewController: UIViewController {
         changePainButton(withImage: UIImage(named: "pain-unselected")!, on: sender)
     }
     
-    
     @IBAction func clickSwellingButton(_ sender: UIButton) {
         changeSwellingButton(withImage: UIImage(named: "swelling-unselected")!, on: sender)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     func changePainButton(withImage currState: UIImage, on button: UIButton) {
         if button.currentImage == UIImage(named: "pain-unselected")  {
@@ -35,8 +44,6 @@ class RightHandViewController: UIViewController {
         }
     }
     
-    
-    
     func changeSwellingButton(withImage currState: UIImage, on button: UIButton) {
         if button.currentImage == UIImage(named: "swelling-unselected")  {
             button.setImage(UIImage(named : "swelling-selected"), for: UIControlState.normal)
@@ -49,27 +56,4 @@ class RightHandViewController: UIViewController {
             print(joints)
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

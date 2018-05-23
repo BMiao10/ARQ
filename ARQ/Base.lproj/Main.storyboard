@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,7 +91,7 @@
         <!--LH-logView-->
         <scene sceneID="G72-vV-UOT">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="sGK-wb-m1z" userLabel="LH-logView" customClass="HandsViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftHandViewController" modalTransitionStyle="flipHorizontal" id="sGK-wb-m1z" userLabel="LH-logView" customClass="LeftHandViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="us2-RV-3vo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +127,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Wc2-WB-NNA"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="5V7-6o-R7g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ez0-kk-AEg">
@@ -135,7 +135,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Sdc-4M-ETe"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Esh-Vt-JEJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3w-GM-qiK">
@@ -143,7 +143,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="hBW-WN-HMU"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="MMz-lv-fmV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo2-IQ-2Sv">
@@ -151,7 +151,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="kYC-yb-xUe"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="adN-m0-F7j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gp-fR-cK8">
@@ -159,7 +159,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="m1b-V9-XH7"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Lnx-eW-Tj6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dII-xs-wsd">
@@ -167,7 +167,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="XDe-2f-HVG"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="N2U-tf-Adm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQD-su-trW">
@@ -175,7 +175,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="CVI-Hh-UEY"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="47I-9z-gh1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yg-c1-M2W">
@@ -183,7 +183,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Aza-wd-t8s"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="ugw-Pc-Jdw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXM-Yw-Zl7">
@@ -191,7 +191,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="mtX-MF-uDZ"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="an7-V1-waE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jms-Ur-XDP">
@@ -199,7 +199,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="ozH-fr-Ozh"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="nVQ-hK-gj9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEa-wq-YXI">
@@ -207,7 +207,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="yZR-g3-4hj"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="j5Q-8q-UyD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stt-VU-xMk">
@@ -215,7 +215,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Cgb-C3-CRB"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="frl-Tt-VZl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2N8-A6-1JT">
@@ -223,7 +223,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="ARy-Xb-zaQ"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="E2s-3m-26D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-px-1gq">
@@ -231,7 +231,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="rk8-Gp-V8s"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="ifc-mO-05g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-BW-pBg">
@@ -239,7 +239,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="p0P-wv-PU5"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Dem-Yo-HQj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-Cw-h9j">
@@ -247,7 +247,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="rl2-VJ-pMR"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="zgK-EB-312"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUn-Z4-bpB">
@@ -255,7 +255,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="U4g-ZE-3Sv"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="TFf-To-pkB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Iz-Pz-qv8">
@@ -263,7 +263,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="h4Y-MV-jBu"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="zrT-rK-Y3l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiX-fm-j71">
@@ -271,7 +271,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
                                 <connections>
-                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Q3h-mQ-Xij"/>
+                                    <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="FSn-pp-8jc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0E-kT-Rd4">
@@ -279,7 +279,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
-                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="dZA-Ka-YpW"/>
+                                    <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="ugG-nR-BLi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -330,101 +330,161 @@
                                 <rect key="frame" x="28" y="363" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="Xc4-B3-Ry0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJ7-x5-XCF">
                                 <rect key="frame" x="28" y="334" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="aTp-3Y-ZJ2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wd-JY-9dq">
                                 <rect key="frame" x="77" y="416" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="iol-dm-dlM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyW-S8-CKS">
                                 <rect key="frame" x="77" y="387" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="GtE-0s-ncM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtK-bZ-oEq">
                                 <rect key="frame" x="124" y="342" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="pMa-h1-zwu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdf-iX-rbA">
                                 <rect key="frame" x="124" y="313" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="5dk-tG-ZWa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJO-uH-5Af">
                                 <rect key="frame" x="178" y="313" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="ahq-9G-19F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-nt-zN6">
                                 <rect key="frame" x="178" y="284" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="ABn-3G-K4Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n63-c6-HXg">
                                 <rect key="frame" x="230" y="342" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="5dY-fB-NyO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="877-5F-ZL5">
                                 <rect key="frame" x="230" y="313" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="TJN-cs-cOM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT4-Qa-Oih">
                                 <rect key="frame" x="280" y="378" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="ydw-dc-dXf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToC-DE-yZN">
                                 <rect key="frame" x="280" y="349" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="c4x-5P-dsV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOt-Z9-3Nd">
                                 <rect key="frame" x="89" y="254" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="vnZ-ZC-REV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foT-JJ-MEG">
                                 <rect key="frame" x="89" y="225" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="Zch-WE-geE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3h-JL-Idq">
                                 <rect key="frame" x="166" y="218" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="Ffd-Xj-htw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtP-JQ-EF1">
                                 <rect key="frame" x="166" y="189" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="QEp-qa-wc3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqK-bR-3Rh">
                                 <rect key="frame" x="241" y="233" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="jwI-UN-FPt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UP-eB-hDl">
                                 <rect key="frame" x="241" y="204" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="dof-Bm-inb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzB-3j-MQ2">
                                 <rect key="frame" x="309" y="293" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="swelling-unselected"/>
+                                <connections>
+                                    <action selector="clickSwellingButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="aeq-KS-7yD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3i8-hY-Vjs">
                                 <rect key="frame" x="309" y="264" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
+                                <connections>
+                                    <action selector="clickPainButton:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="Nmn-ly-0DF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -748,7 +808,7 @@
         <segue reference="1jf-bC-C6R"/>
         <segue reference="g9C-s4-zbh"/>
         <segue reference="1Cn-Y0-plb"/>
-        <segue reference="JhT-wm-i3G"/>
+        <segue reference="jOd-Kx-f3Z"/>
         <segue reference="hlx-qC-7EE"/>
         <segue reference="fak-WL-f3l"/>
         <segue reference="N7p-1U-W9O"/>
