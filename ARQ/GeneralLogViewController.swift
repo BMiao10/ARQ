@@ -13,7 +13,6 @@ class GeneralLogViewController: UIViewController {
     @IBOutlet weak var stiffnessSlider: UISlider!
     @IBOutlet weak var generalSlider: UISlider!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,7 +23,9 @@ class GeneralLogViewController: UIViewController {
     
     @IBAction func onNextButtonClick(_ sender: Any) {
         let stiffness = round(stiffnessSlider.value)
+        let general = round(generalSlider.value)
         let data: DailyData = DailyData()
         data.setStiffness(stiffness: Int(stiffness))
+        data.setGeneral(general: Int(general))
     }
 }

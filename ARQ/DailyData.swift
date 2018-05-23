@@ -17,16 +17,16 @@ class DailyData {
         print("Just set stiffness: " + String(stiffness))
     }
     
-    func setDep(dep: Bool) {
-        UserDefaults.standard.set(dep, forKey: "depression")
-        print("Just set depression: " + String(dep))
+    func setGeneral(general: Int) {
+        UserDefaults.standard.set(general, forKey: "general")
+        print("Just set general: " + String(general))
     }
     
     func saveData() {
         let stiffness = UserDefaults.standard.value(forKey: "stiffness") as! Int
-        let dep = UserDefaults.standard.value(forKey: "depression") as! Bool
-        print("Trying to save data: " + String(dep) + " " + String(stiffness))
-        var model = DailyDataModel(stiffnessValue: stiffness, depressionBool: dep)
+        let general = UserDefaults.standard.value(forKey: "general") as! Int
+        print("Trying to save data: " + String(general) + " " + String(stiffness))
+        var model = DailyDataModel(stiffnessValue: stiffness, generalValue: general)
         loadData()
         print("current data:")
         for data in store.userData {

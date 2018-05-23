@@ -35,7 +35,7 @@ class GeneralDepViewController: UIViewController {
         }
         
         let data: DailyData = DailyData()
-        data.setDep(dep: depBool)
+       // data.setDep(dep: depBool)
         
         data.saveData()
     }

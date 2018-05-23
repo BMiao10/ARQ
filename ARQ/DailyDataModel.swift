@@ -9,20 +9,20 @@ import Foundation
 
 class DailyDataModel: NSObject, NSCoding {
     var stiffnessValue: Int!
-    var depressionBool: Bool!
+    var generalValue: Int!
     
     
     // Name different keys we will use to store and access data
     struct PropertyKeys {
         static let stiffness = "stiffness"
-        static let depression = "depression"
+        static let general = "general"
     }
     
     override init() {}
     
-    init(stiffnessValue: Int, depressionBool: Bool) {
+    init(stiffnessValue: Int, generalValue: Int) {
         self.stiffnessValue = stiffnessValue
-        self.depressionBool = depressionBool
+        self.generalValue = generalValue
     }
     
     required init(coder decoder: NSCoder) {
@@ -30,26 +30,26 @@ class DailyDataModel: NSObject, NSCoding {
             stiffnessValue = stiffnessObject
         }
         
-        if let depressionObject = decoder.decodeObject(forKey: PropertyKeys.depression) as? Bool {
-            depressionBool = depressionObject
+        if let generalObject = decoder.decodeObject(forKey: PropertyKeys.general) as? Int {
+            generalValue = generalObject
         }
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encode(stiffnessValue, forKey: PropertyKeys.stiffness)
-        aCoder.encode(depressionBool, forKey: PropertyKeys.depression)
+        aCoder.encode(generalValue, forKey: PropertyKeys.general)
     }
     
     func encode(with coder: NSCoder) {
         coder.encode(stiffnessValue, forKey: PropertyKeys.stiffness)
-        coder.encode(depressionBool, forKey: PropertyKeys.depression)
+        coder.encode(generalValue, forKey: PropertyKeys.general)
     }
     
     func getStiffnessValue() -> Int {
         return stiffnessValue
     }
     
-    func getDepBool() -> Bool {
-        return depressionBool
+    func getGeneralValue() -> Int {
+        return generalValue
     }
 }
