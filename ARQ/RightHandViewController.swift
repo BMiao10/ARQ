@@ -11,6 +11,37 @@ import UIKit
 class RightHandViewController: UIViewController {
     
     var joints:Int = 0
+    
+    func changePainButton(withImage currState: UIImage, on button: UIButton) {
+        if button.currentImage == UIImage(named: "pain-unselected")  {
+            button.setImage(UIImage(named : "pain-selected"), for: UIControlState.normal)
+            joints+=1
+            print(joints)
+        }
+        else {
+            button.setImage(UIImage(named : "pain-unselected"), for: UIControlState.normal)
+            joints-=1
+            print(joints)
+        }
+    }
+    
+    
+    @IBAction func clickSwellingButton(_ sender: UIButton) {
+        changeSwellingButton(withImage: UIImage(named: "pain-unselected")!, on: sender)
+    }
+    
+    func changeSwellingButton(withImage currState: UIImage, on button: UIButton) {
+        if button.currentImage == UIImage(named: "swelling-unselected")  {
+            button.setImage(UIImage(named : "swelling-selected"), for: UIControlState.normal)
+            joints+=1
+            print(joints)
+        }
+        else {
+            button.setImage(UIImage(named : "swelling-unselected"), for: UIControlState.normal)
+            joints-=1
+            print(joints)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
