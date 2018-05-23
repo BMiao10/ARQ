@@ -29,6 +29,14 @@
                                     <segue destination="dNp-n6-Z9W" kind="show" id="1Cn-Y0-plb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp6-bs-Fwh">
+                                <rect key="frame" x="16" y="49" width="24" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="view-back-button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hvd-N6-ga7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iNW-Ue-oxu"/>
@@ -167,21 +175,6 @@
             </objects>
             <point key="canvasLocation" x="1612" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="0n1-fs-4eE">
-            <objects>
-                <viewController id="w5G-rL-jNe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6dx-SA-dht">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="nei-aC-Bxy"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6R5-6C-GFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1716" y="911"/>
-        </scene>
         <!--Send View Controller-->
         <scene sceneID="nFq-Cb-EXJ">
             <objects>
@@ -191,10 +184,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-Vi-v69">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="578"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDe-tz-0F8">
+                                <rect key="frame" x="62" y="586" width="251" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="done-button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="WaC-mm-AKq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nvP-Ty-OKT"/>
@@ -210,7 +211,7 @@
         <!--Med-LogView-->
         <scene sceneID="nz3-xf-jMq">
             <objects>
-                <viewController id="657-Go-fUa" userLabel="Med-LogView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MedViewController" id="657-Go-fUa" userLabel="Med-LogView" customClass="MedViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uuy-vK-Frk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,57 +235,88 @@
                                     <segue destination="7Gu-N3-8P6" kind="show" id="N7p-1U-W9O"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Fe-sV-zw4">
-                                <rect key="frame" x="0.0" y="121" width="374" height="403"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Medication" rowHeight="111" id="ZMK-ee-LSU">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="111"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZMK-ee-LSU" id="rhf-Ir-vkI">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="110.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Methotrexate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-4g-Jpc" userLabel="med-label">
-                                                    <rect key="frame" x="86" y="11" width="202" height="46"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                                    <color key="textColor" red="0.79607843137254897" green="0.29411764705882354" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v8N-Gp-1Ug">
-                                                    <rect key="frame" x="86" y="65" width="97" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hr-zU-hXh" userLabel="field-label">
-                                                    <rect key="frame" x="215" y="61" width="54" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                    <color key="textColor" red="0.79607843140000001" green="0.29411764709999999" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vp-lk-JoH">
                                 <rect key="frame" x="61" y="532" width="253" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="new-med-button"/>
+                                <connections>
+                                    <action selector="medPopUp:" destination="657-Go-fUa" eventType="touchUpInside" id="ciT-3u-Shn"/>
+                                </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-Xn-rtL">
+                                <rect key="frame" x="0.0" y="121" width="375" height="403"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="112" id="EN0-M3-Bl9" customClass="CustomTableViewCell" customModule="ARQ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EN0-M3-Bl9" id="G8O-Kl-xOG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-HW-BWN">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="99"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoE-xg-tNf">
+                                                            <rect key="frame" x="143" y="15" width="169" height="31"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Methotrexate">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.79607843137254897" green="0.29411764705882354" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="27" name="Arial-BoldMT"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XgL-xh-feA">
+                                                            <rect key="frame" x="154" y="53" width="97" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMu-c7-6vN">
+                                                            <rect key="frame" x="257" y="53" width="44" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <color key="textColor" red="0.79607843137254897" green="0.29411764705882354" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="methotrexate-icon" translatesAutoresizingMaskIntoConstraints="NO" id="GFm-wn-Be1">
+                                                            <rect key="frame" x="30" y="15" width="81" height="70"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.53991866438356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellView" destination="IBl-HW-BWN" id="8jD-Jk-EMZ"/>
+                                            <outlet property="medField" destination="XgL-xh-feA" id="FrK-8L-IDZ"/>
+                                            <outlet property="medImage" destination="GFm-wn-Be1" id="mbM-Qs-sRU"/>
+                                            <outlet property="medLabel" destination="ZoE-xg-tNf" id="5OQ-9P-9Ws"/>
+                                            <outlet property="pillLabel" destination="XMu-c7-6vN" id="CyF-cv-98x"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wPr-81-KKC"/>
                     </view>
+                    <connections>
+                        <outlet property="table_view" destination="4gS-Xn-rtL" id="k9M-5A-mmS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EN-De-oNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="919"/>
+            <point key="canvasLocation" x="133.59999999999999" y="918.89055472263874"/>
         </scene>
         <!--General2-LogView-->
         <scene sceneID="7KT-Si-xwT">
@@ -424,6 +456,7 @@
     </scenes>
     <resources>
         <image name="ARQ-patient_home_mock" width="1242" height="2208"/>
+        <image name="done-button" width="716" height="205"/>
         <image name="info-popup_icon" width="1505" height="1330"/>
         <image name="log-LH-background" width="1248" height="2216"/>
         <image name="log-RH-background" width="1248" height="2216"/>
@@ -431,16 +464,19 @@
         <image name="log-general-background" width="1248" height="2216"/>
         <image name="log-general2-background" width="1248" height="2217"/>
         <image name="log-medication-background" width="1247" height="2216"/>
+        <image name="methotrexate-icon" width="1058" height="1041"/>
         <image name="new-med-button" width="1066" height="227"/>
+        <image name="view-back-button" width="64" height="99"/>
         <image name="view-background" width="1242" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0QL-OW-Zw0"/>
-        <segue reference="1jf-bC-C6R"/>
+        <segue reference="OjO-OH-9g8"/>
         <segue reference="g9C-s4-zbh"/>
-        <segue reference="SI8-dg-T1h"/>
+        <segue reference="1Cn-Y0-plb"/>
         <segue reference="0gO-fH-P6c"/>
         <segue reference="hlx-qC-7EE"/>
+        <segue reference="WaC-mm-AKq"/>
         <segue reference="N7p-1U-W9O"/>
     </inferredMetricsTieBreakers>
 </document>
