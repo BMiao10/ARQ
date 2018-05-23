@@ -91,7 +91,7 @@
         <!--LH-logView-->
         <scene sceneID="G72-vV-UOT">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="sGK-wb-m1z" userLabel="LH-logView" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="sGK-wb-m1z" userLabel="LH-logView" customClass="LeftHandViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="us2-RV-3vo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,9 @@
                         <viewLayoutGuide key="safeArea" id="3dm-2U-Sw8"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Ga-Et-t32"/>
+                    <connections>
+                        <outlet property="image" destination="GFh-So-CIt" id="q7e-36-b5K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJV-pM-vKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -321,7 +324,7 @@
         <!--General2-LogView-->
         <scene sceneID="7KT-Si-xwT">
             <objects>
-                <viewController id="eES-dd-nYQ" userLabel="General2-LogView" sceneMemberID="viewController">
+                <viewController id="eES-dd-nYQ" userLabel="General2-LogView" customClass="GeneralDepViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YR8-01-wc2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,6 +355,7 @@
                                 <rect key="frame" x="214" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="onClick:" destination="eES-dd-nYQ" eventType="touchUpInside" id="fxi-zc-jAD"/>
                                     <segue destination="657-Go-fUa" kind="show" animates="NO" id="BcK-qD-Xlh"/>
                                 </connections>
                             </button>
@@ -367,6 +371,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oYe-Du-CyH"/>
                     </view>
+                    <connections>
+                        <outlet property="depButton" destination="Gsp-Vo-Rr0" id="MY1-5Q-F9L"/>
+                        <outlet property="nextButton" destination="3K4-QT-0Vx" id="YIY-KD-MSs"/>
+                        <outlet property="view" destination="YR8-01-wc2" id="pwD-I7-Ceu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0f-OP-lN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,7 +384,7 @@
         <!--General-LogView-->
         <scene sceneID="ubU-kj-P7G">
             <objects>
-                <viewController id="Dxg-Ne-oiy" userLabel="General-LogView" sceneMemberID="viewController">
+                <viewController id="Dxg-Ne-oiy" userLabel="General-LogView" customClass="GeneralLogViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AxL-pt-xZm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,6 +410,7 @@
                                 <rect key="frame" x="214" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="onNextButtonClick:" destination="Dxg-Ne-oiy" eventType="touchUpInside" id="Tby-u5-oEs"/>
                                     <segue destination="eES-dd-nYQ" kind="show" animates="NO" id="z2W-J9-cNk"/>
                                 </connections>
                             </button>
@@ -413,6 +423,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IMJ-FV-YQn"/>
                     </view>
+                    <connections>
+                        <outlet property="generalSlider" destination="P1s-bf-nZh" id="l42-vH-KpI"/>
+                        <outlet property="nextButton" destination="W64-XX-9Sn" id="Coa-wK-FhY"/>
+                        <outlet property="stiffnessSlider" destination="Oq7-3E-4I9" id="29R-UD-Lew"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7l-jy-mp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
