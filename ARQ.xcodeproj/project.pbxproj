@@ -14,6 +14,7 @@
 		2B7B91F420B241AE00B2EA07 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B91F320B241AE00B2EA07 /* DataStorage.swift */; };
 		2B7B91F820B396B000B2EA07 /* GeneralDepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B91F720B396B000B2EA07 /* GeneralDepViewController.swift */; };
 		40366FBC20A4E3150097E02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40366FBB20A4E3150097E02F /* Assets.xcassets */; };
+		4042ABDE20B381CA0022AA0D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042ABDD20B381CA0022AA0D /* SendViewController.swift */; };
 		4090FB8120A7E1220065777B /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090FB8020A7E1220065777B /* popUpViewController.swift */; };
 		40D2E21420AA2EA1007797FF /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */; };
 		40D942B920A9E3AD00E32FEA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D942B820A9E3AD00E32FEA /* CustomTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 		2B7B91F320B241AE00B2EA07 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		2B7B91F720B396B000B2EA07 /* GeneralDepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralDepViewController.swift; sourceTree = "<group>"; };
 		40366FBB20A4E3150097E02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4042ABDD20B381CA0022AA0D /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		4090FB8020A7E1220065777B /* popUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpViewController.swift; sourceTree = "<group>"; };
 		40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		40D942B820A9E3AD00E32FEA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4090FB8020A7E1220065777B /* popUpViewController.swift */,
 				40D942B820A9E3AD00E32FEA /* CustomTableViewCell.swift */,
 				40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */,
+				4042ABDD20B381CA0022AA0D /* SendViewController.swift */,
 			);
 			path = ARQ;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				2B7B91F820B396B000B2EA07 /* GeneralDepViewController.swift in Sources */,
 				40E9602C2097D51400C61A36 /* ViewController.swift in Sources */,
 				2B7B91EC20ACB12D00B2EA07 /* LeftHandViewController.swift in Sources */,
+				4042ABDE20B381CA0022AA0D /* SendViewController.swift in Sources */,
 				40D942B920A9E3AD00E32FEA /* CustomTableViewCell.swift in Sources */,
 				40E9602A2097D51400C61A36 /* AppDelegate.swift in Sources */,
 				2B7B91F420B241AE00B2EA07 /* DataStorage.swift in Sources */,

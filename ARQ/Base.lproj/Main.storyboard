@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Insight View Controller-->
         <scene sceneID="ZTL-Vy-g8S">
             <objects>
-                <viewController id="7Gu-N3-8P6" sceneMemberID="viewController">
+                <viewController id="7Gu-N3-8P6" userLabel="Insight View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KN2-Ya-Krz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbJ-3F-WkW">
+                                <rect key="frame" x="82" y="588" width="203" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="dNp-n6-Z9W" kind="show" id="1Cn-Y0-plb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iNW-Ue-oxu"/>
@@ -29,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxQ-cC-dUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-926" y="134"/>
+            <point key="canvasLocation" x="-927.20000000000005" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -56,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m8-Q7-p1c" userLabel="Send">
                                 <rect key="frame" x="29" y="533" width="317" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="dNp-n6-Z9W" kind="show" id="SI8-dg-T1h"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ARQ-patient_home_mock" translatesAutoresizingMaskIntoConstraints="NO" id="iGF-tR-q9E">
                                 <rect key="frame" x="0.0" y="20" width="375" height="650"/>
@@ -159,6 +169,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbL-DZ-5zR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0n1-fs-4eE">
+            <objects>
+                <viewController id="w5G-rL-jNe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6dx-SA-dht">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nei-aC-Bxy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6R5-6C-GFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1716" y="911"/>
+        </scene>
+        <!--Send View Controller-->
+        <scene sceneID="nFq-Cb-EXJ">
+            <objects>
+                <viewController id="dNp-n6-Z9W" userLabel="Send View Controller" customClass="SendViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQD-Uy-ken">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-Vi-v69">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nvP-Ty-OKT"/>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="Ifo-Vi-v69" id="tiW-2g-ctj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fp5-Z6-n0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-927.20000000000005" y="909.89505247376314"/>
         </scene>
         <!--Med-LogView-->
         <scene sceneID="nz3-xf-jMq">
@@ -400,10 +450,18 @@
         <image name="view-background" width="1242" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="nXb-rI-TpN"/>
         <segue reference="OjO-OH-9g8"/>
         <segue reference="z2W-J9-cNk"/>
         <segue reference="JhT-wm-i3G"/>
+=======
+        <segue reference="0QL-OW-Zw0"/>
+        <segue reference="1jf-bC-C6R"/>
+        <segue reference="g9C-s4-zbh"/>
+        <segue reference="SI8-dg-T1h"/>
+        <segue reference="0gO-fH-P6c"/>
+>>>>>>> af9982c02d495881f6292a33f69e4930a4f4ea23
         <segue reference="hlx-qC-7EE"/>
         <segue reference="N7p-1U-W9O"/>
     </inferredMetricsTieBreakers>
