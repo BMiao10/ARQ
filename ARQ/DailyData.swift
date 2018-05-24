@@ -51,11 +51,12 @@ class DailyData {
         let meds = UserDefaults.standard.value(forKey: "medications") as! [String]
         let doses = UserDefaults.standard.value(forKey: "doses") as! [Int]
         let stiffness = UserDefaults.standard.value(forKey: "stiffness") as! Int
+  
         let index = self.store.userData.count
-        
-        print("Trying to save data: " + String(general) + " " + String(describing: meds))
-        
+  
         let overall = calculateOverallWellness(general: general, joints: (rightJoints + leftJoints), stiffness: stiffness)
+        print("overall wellness: " + String(overall))
+        
         var model = DailyDataModel(index: index, overallValue: overall, meds: meds, doses: doses)
         loadData()
         print("current data:")
@@ -66,7 +67,9 @@ class DailyData {
     }
     
     func calculateOverallWellness(general: Int, joints: Int, stiffness: Int) -> Int {
-        return 0
+        let temp = (joints + stiffness)
+        let value = (Double)(general - temp)/100.1
+        return Int(round(value*9.9))
     }
     
     var filePath: String {
