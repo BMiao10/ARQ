@@ -25,19 +25,7 @@ class GeneralDepViewController: UIViewController {
     }
     
     @IBAction func onClick(_ sender: Any) {
-        var depBool: Bool
-        var depValue = depButton.titleForSegment(at: depButton.selectedSegmentIndex)!
-       
-        if (depValue == "Yes") {
-            depBool = true
-        } else {
-            depBool = false
-        }
-        
-        let data: DailyData = DailyData()
-       // data.setDep(dep: depBool)
-        
-        //data.saveData()
+
     }
     
     

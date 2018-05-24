@@ -9,11 +9,9 @@
 import UIKit
 
 var global_med_array = ["Methotrexate"]
+var med_amount_array = []
 
 class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var med_amount_array = [0]
-
     
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var table_view: UITableView!
@@ -36,7 +34,7 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             
             global_med_array.append((textField?.text)!)
-            self.med_amount_array.append(0)
+            med_amount_array.append(0)
             
             self.table_view.reloadData()
             
@@ -106,7 +104,8 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         alert.addAction(UIAlertAction(title: "Log", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             
-            self.med_amount_array[indexPath.row] = Int((textField?.text)!)!
+            let temp = (textField?.text!)!
+            med_amount_array.append(Int(temp)!)
             
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MedViewController") as UIViewController
             
@@ -123,15 +122,9 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 
     @IBAction func onDoneButtonClick(_ sender: Any) {
-        // save medication name
-        
         let data: DailyData = DailyData()
-        
-        for med in global_med_array {
-            
-        }
-        var index = NSIndexPath.init(index: 1)
         data.setMedicationNames(medications: global_med_array)
+        data.setMedicationDoses(doses: med_amount_array as! [Int])
         data.saveData()
     }
 

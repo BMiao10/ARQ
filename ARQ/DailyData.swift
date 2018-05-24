@@ -61,7 +61,7 @@ class DailyData {
         loadData()
         print("current data:")
         for data in store.userData {
-            print(data.overallValue!)
+            print(String(describing: data.medications!))
         }
         save(dailyDataItem: model)
     }
