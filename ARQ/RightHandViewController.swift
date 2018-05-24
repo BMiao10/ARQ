@@ -10,6 +10,7 @@ import UIKit
 
 class RightHandViewController: UIViewController {
     
+    @IBOutlet weak var nextButton: UIButton!
     var joints:Int = 0
     
     @IBAction func clickPainButton(_ sender: UIButton) {
@@ -26,12 +27,10 @@ class RightHandViewController: UIViewController {
         if button.currentImage == UIImage(named: "pain-unselected")  {
             button.setImage(UIImage(named : "pain-selected"), for: UIControlState.normal)
             joints+=1
-            print(joints)
         }
         else {
             button.setImage(UIImage(named : "pain-unselected"), for: UIControlState.normal)
             joints-=1
-            print(joints)
         }
     }
     
@@ -41,13 +40,16 @@ class RightHandViewController: UIViewController {
         if button.currentImage == UIImage(named: "swelling-unselected")  {
             button.setImage(UIImage(named : "swelling-selected"), for: UIControlState.normal)
             joints+=1
-            print(joints)
         }
         else {
             button.setImage(UIImage(named : "swelling-unselected"), for: UIControlState.normal)
             joints-=1
-            print(joints)
         }
+    }
+
+    @IBAction func onNextButtonClick(_ sender: Any) {
+        let data: DailyData = DailyData()
+        data.setRightHandJoints(joints: joints)
     }
 
     override func viewDidLoad() {
@@ -60,16 +62,4 @@ class RightHandViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

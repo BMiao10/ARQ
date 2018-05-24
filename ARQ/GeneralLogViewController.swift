@@ -24,6 +24,7 @@ class GeneralLogViewController: UIViewController {
     @IBAction func onNextButtonClick(_ sender: Any) {
         let stiffness = round(stiffnessSlider.value)
         let general = round(generalSlider.value)
+        
         let data: DailyData = DailyData()
         data.setStiffness(stiffness: Int(stiffness))
         data.setGeneral(general: Int(general))

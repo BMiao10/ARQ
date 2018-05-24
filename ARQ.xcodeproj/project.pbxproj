@@ -19,7 +19,6 @@
 		4042ABE520B5E9590022AA0D /* LeftHandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042ABE420B5E9590022AA0D /* LeftHandViewController.swift */; };
 		4042ABE720B5EC8D0022AA0D /* DailyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042ABE620B5EC8D0022AA0D /* DailyData.swift */; };
 		4090FB8120A7E1220065777B /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090FB8020A7E1220065777B /* popUpViewController.swift */; };
-		40D2E21420AA2EA1007797FF /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */; };
 		40D942B920A9E3AD00E32FEA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D942B820A9E3AD00E32FEA /* CustomTableViewCell.swift */; };
 		40E9602A2097D51400C61A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E960292097D51400C61A36 /* AppDelegate.swift */; };
 		40E9602C2097D51400C61A36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E9602B2097D51400C61A36 /* ViewController.swift */; };
@@ -58,7 +57,6 @@
 		4042ABE420B5E9590022AA0D /* LeftHandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHandViewController.swift; sourceTree = "<group>"; };
 		4042ABE620B5EC8D0022AA0D /* DailyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyData.swift; sourceTree = "<group>"; };
 		4090FB8020A7E1220065777B /* popUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpViewController.swift; sourceTree = "<group>"; };
-		40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		40D942B820A9E3AD00E32FEA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		40E960262097D51400C61A36 /* ARQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E960292097D51400C61A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				40E960352097D51900C61A36 /* Info.plist */,
 				4090FB8020A7E1220065777B /* popUpViewController.swift */,
 				40D942B820A9E3AD00E32FEA /* CustomTableViewCell.swift */,
-				40D2E21320AA2EA1007797FF /* CustomTableViewController.swift */,
 				4042ABDD20B381CA0022AA0D /* SendViewController.swift */,
 				4042ABDF20B509B60022AA0D /* MedViewController.swift */,
 				4042ABE220B5CE700022AA0D /* RightHandViewController.swift */,
@@ -309,7 +306,6 @@
 				4042ABE520B5E9590022AA0D /* LeftHandViewController.swift in Sources */,
 				4042ABE720B5EC8D0022AA0D /* DailyData.swift in Sources */,
 				2B7B91F420B241AE00B2EA07 /* DataStorage.swift in Sources */,
-				40D2E21420AA2EA1007797FF /* CustomTableViewController.swift in Sources */,
 				4042ABE020B509B60022AA0D /* MedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
