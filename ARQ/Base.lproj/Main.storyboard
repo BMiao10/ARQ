@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -112,6 +112,7 @@
                                 <rect key="frame" x="213" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
+                                    <action selector="onNextButtonClick:" destination="sGK-wb-m1z" eventType="touchUpInside" id="p5V-eM-lyq"/>
                                     <segue destination="Run-Ok-Ngb" kind="show" id="jOd-Kx-f3Z"/>
                                 </connections>
                             </button>
@@ -287,6 +288,9 @@
                         <viewLayoutGuide key="safeArea" id="3dm-2U-Sw8"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Ga-Et-t32"/>
+                    <connections>
+                        <outlet property="nextButton" destination="Z2v-Os-uXg" id="Pd2-3U-YeE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJV-pM-vKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,6 +327,7 @@
                                 <rect key="frame" x="214" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
+                                    <action selector="onNextButtonClick:" destination="Run-Ok-Ngb" eventType="touchUpInside" id="P5y-1h-jJM"/>
                                     <segue destination="Dxg-Ne-oiy" kind="show" animates="NO" id="1jf-bC-C6R"/>
                                 </connections>
                             </button>
@@ -806,7 +811,7 @@
         <image name="view-background" width="1242" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nXb-rI-TpN"/>
+        <segue reference="0QL-OW-Zw0"/>
         <segue reference="1jf-bC-C6R"/>
         <segue reference="g9C-s4-zbh"/>
         <segue reference="1Cn-Y0-plb"/>

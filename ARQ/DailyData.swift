@@ -22,6 +22,16 @@ class DailyData {
         print("Just set general: " + String(general))
     }
     
+    func setLeftHandJoints(joints: Int) {
+        UserDefaults.standard.set(joints, forKey: "leftJoints")
+        print("Just set left joints: " + String(joints))
+    }
+    
+    func setRightHandJoints(joints: Int) {
+        UserDefaults.standard.set(joints, forKey: "rightJoints")
+        print("Just set right joints: " + String(joints))
+    }
+    
     func setMedicationNames(medications: [String]) {
         UserDefaults.standard.set(medications, forKey: "medications")
         print("Just set medications:")
@@ -35,16 +45,28 @@ class DailyData {
     }
     
     func saveData() {
-        let stiffness = UserDefaults.standard.value(forKey: "stiffness") as! Int
         let general = UserDefaults.standard.value(forKey: "general") as! Int
-        print("Trying to save data: " + String(general) + " " + String(stiffness))
-        var model = DailyDataModel(stiffnessValue: stiffness, generalValue: general)
+        let rightJoints = UserDefaults.standard.value(forKey: "rightJoints") as! Int
+        let leftJoints = UserDefaults.standard.value(forKey: "leftJoints") as! Int
+        let meds = UserDefaults.standard.value(forKey: "medications") as! [String]
+        let doses = UserDefaults.standard.value(forKey: "doses") as! [Int]
+        let stiffness = UserDefaults.standard.value(forKey: "stiffness") as! Int
+        let index = self.store.userData.count
+        
+        print("Trying to save data: " + String(general) + " " + String(describing: meds))
+        
+        let overall = calculateOverallWellness(general: general, joints: (rightJoints + leftJoints), stiffness: stiffness)
+        var model = DailyDataModel(index: index, overallValue: overall, meds: meds, doses: doses)
         loadData()
         print("current data:")
         for data in store.userData {
-            print(data.stiffnessValue!)
+            print(data.overallValue!)
         }
         save(dailyDataItem: model)
+    }
+    
+    func calculateOverallWellness(general: Int, joints: Int, stiffness: Int) -> Int {
+        return 0
     }
     
     var filePath: String {

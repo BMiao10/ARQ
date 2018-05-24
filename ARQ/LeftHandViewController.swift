@@ -11,6 +11,7 @@ import UIKit
 class LeftHandViewController: UIViewController {
     
     var joints:Int = 0
+    @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func clickPainButton(_ sender: UIButton) {
         changePainButton(withImage: UIImage(named: "pain-unselected")!, on: sender)
@@ -35,25 +36,25 @@ class LeftHandViewController: UIViewController {
         if button.currentImage == UIImage(named: "pain-unselected")  {
             button.setImage(UIImage(named : "pain-selected"), for: UIControlState.normal)
             joints+=1
-            print(joints)
         }
         else {
             button.setImage(UIImage(named : "pain-unselected"), for: UIControlState.normal)
             joints-=1
-            print(joints)
         }
+    }
+    @IBAction func onNextButtonClick(_ sender: Any) {
+        let data: DailyData = DailyData()
+        data.setLeftHandJoints(joints: joints)
     }
     
     func changeSwellingButton(withImage currState: UIImage, on button: UIButton) {
         if button.currentImage == UIImage(named: "swelling-unselected")  {
             button.setImage(UIImage(named : "swelling-selected"), for: UIControlState.normal)
             joints+=1
-            print(joints)
         }
         else {
             button.setImage(UIImage(named : "swelling-unselected"), for: UIControlState.normal)
             joints-=1
-            print(joints)
         }
     }
 }
