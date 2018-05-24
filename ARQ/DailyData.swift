@@ -67,8 +67,8 @@ class DailyData {
     }
     
     func calculateOverallWellness(general: Int, joints: Int, stiffness: Int) -> Int {
-        let temp = (joints + stiffness)
-        let value = (Double)(general - temp)/100.1
+        let temp = (joints + stiffness)/100
+        let value = (Double)(general - temp) + 0.1
         return Int(round(value*9.9))
     }
     
@@ -88,5 +88,9 @@ class DailyData {
         if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [DailyDataModel] {
             self.store.userData = ourData
         }
+    }
+    
+    func getData() -> [DailyDataModel] {
+        return self.store.userData
     }
 }
