@@ -121,15 +121,9 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 
     @IBAction func onDoneButtonClick(_ sender: Any) {
-        // save medication name
-        
         let data: DailyData = DailyData()
-        
-        for med in global_med_array {
-            
-        }
-        var index = NSIndexPath.init(index: 1)
         data.setMedicationNames(medications: global_med_array)
+        data.setMedicationDoses(doses: med_amount_array as! [Int])
         data.saveData()
     }
 
