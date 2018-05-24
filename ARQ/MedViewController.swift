@@ -12,6 +12,9 @@ var global_med_array = ["Methotrexate"]
 
 class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var med_amount_array = [0]
+
+    
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var table_view: UITableView!
     
@@ -33,6 +36,7 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             
             global_med_array.append((textField?.text)!)
+            self.med_amount_array.append(0)
             
             self.table_view.reloadData()
             
@@ -73,7 +77,9 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell?.selectionStyle = UITableViewCellSelectionStyle.none
         
         cell?.medLabel.text = global_med_array[indexPath.row]
-       
+        
+        cell?.medButton.setImage(UIImage(named: "log-front_button"), for: UIControlState.normal)
+        
         if (UIImage(named: "\(global_med_array[indexPath.row].lowercased())-icon") != nil)  {
             cell?.medImage.image = UIImage(named: "\(global_med_array[indexPath.row].lowercased())-icon")
         }
@@ -84,13 +90,43 @@ class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell!
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Add \(global_med_array[indexPath.row]) Dosage", message: "Enter number of pills taken", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.keyboardType = UIKeyboardType.alphabet
+            textField.placeholder = "Enter number of pills taken"
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in })
+        
+        alert.addAction(cancelAction)
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Log", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            
+            self.med_amount_array[indexPath.row] = Int((textField?.text)!)!
+            
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MedViewController") as UIViewController
+            
+            self.present(viewController, animated: false, completion: nil)
+        }))
+    
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 112
     }
 
     @IBAction func onDoneButtonClick(_ sender: Any) {
         // save medication name
+        
         let data: DailyData = DailyData()
+        
         for med in global_med_array {
             
         }

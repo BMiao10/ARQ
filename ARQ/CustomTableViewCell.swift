@@ -15,13 +15,11 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var medImage: UIImageView!
     
-    @IBOutlet weak var pillLabel: UILabel!
+    @IBOutlet weak var medButton: UIButton!
     
     @IBOutlet weak var medLabel: UILabel!
     
-    @IBOutlet weak var medField: UITextField!
-    
-    
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
