@@ -9,7 +9,7 @@
 import UIKit
 
 var global_med_array = ["Methotrexate"]
-var med_amount_array = []
+var med_amount_array: [Int] = []
 
 class MedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
