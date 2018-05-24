@@ -89,4 +89,8 @@ class DailyData {
             self.store.userData = ourData
         }
     }
+    
+    func getData() -> [DailyDataModel] {
+        return self.store.userData
+    }
 }
