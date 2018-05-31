@@ -60,15 +60,19 @@ class DailyData {
         var model = DailyDataModel(index: index, overallValue: overall, meds: meds, doses: doses)
         loadData()
         print("current data:")
+       
+        /**
         for data in store.userData {
             print(String(describing: data.medications!))
         }
+         **/
         save(dailyDataItem: model)
+        
     }
     
     func calculateOverallWellness(general: Int, joints: Int, stiffness: Int) -> Int {
-        let temp = (Double)(joints + stiffness)/100
-        let value = (Double)(general) - temp + 0.1
+        let temp = (joints + stiffness)/100
+        let value = (Double)(general - temp) + 0.1
         return Int(round(value*9.9))
     }
     

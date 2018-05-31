@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Insight View Controller-->
         <scene sceneID="ZTL-Vy-g8S">
             <objects>
-                <viewController id="7Gu-N3-8P6" userLabel="Insight View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InsightViewController." id="7Gu-N3-8P6" userLabel="Insight View Controller" customClass="InsightViewController" customModule="ARQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KN2-Ya-Krz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,10 +37,18 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="hvd-N6-ga7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWF-Hl-s0P" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="132" width="343" height="359"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iNW-Ue-oxu"/>
                     </view>
+                    <connections>
+                        <outlet property="medLineChart" destination="PWF-Hl-s0P" id="tcW-Bh-070"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxQ-cC-dUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,9 +251,8 @@
                                     <action selector="clickSwellingButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="Dem-Yo-HQj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-Cw-h9j">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-Cw-h9j">
                                 <rect key="frame" x="9" y="262" width="60" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pain-unselected"/>
                                 <connections>
                                     <action selector="clickPainButton:" destination="sGK-wb-m1z" eventType="touchUpInside" id="zgK-EB-312"/>
@@ -285,6 +292,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zYI-Cw-h9j" firstAttribute="centerY" secondItem="us2-RV-3vo" secondAttribute="centerY" constant="-55.5" id="Uix-E1-eRY"/>
+                            <constraint firstItem="zYI-Cw-h9j" firstAttribute="centerX" secondItem="us2-RV-3vo" secondAttribute="centerX" constant="-148.5" id="rms-86-5Zg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3dm-2U-Sw8"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Ga-Et-t32"/>
@@ -558,7 +569,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <action selector="onDoneButtonClick:" destination="657-Go-fUa" eventType="touchUpInside" id="bOV-Zy-rVE"/>
-                                    <segue destination="7Gu-N3-8P6" kind="show" id="N7p-1U-W9O"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="vLY-nM-PX8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vp-lk-JoH">
@@ -679,6 +690,13 @@
                                 <state key="normal" image="log-back_button"/>
                                 <connections>
                                     <segue destination="Dxg-Ne-oiy" kind="show" animates="NO" id="OjO-OH-9g8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72q-Dc-ldY" userLabel="depYesButton">
+                                <rect key="frame" x="86" y="265" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="depYesButton:" destination="eES-dd-nYQ" eventType="touchUpInside" id="eat-8x-4PT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -803,12 +821,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0QL-OW-Zw0"/>
-        <segue reference="1jf-bC-C6R"/>
+        <segue reference="OjO-OH-9g8"/>
         <segue reference="g9C-s4-zbh"/>
-        <segue reference="1Cn-Y0-plb"/>
+        <segue reference="SI8-dg-T1h"/>
         <segue reference="jOd-Kx-f3Z"/>
-        <segue reference="hlx-qC-7EE"/>
+        <segue reference="Nhg-EF-4uP"/>
         <segue reference="fak-WL-f3l"/>
-        <segue reference="N7p-1U-W9O"/>
     </inferredMetricsTieBreakers>
 </document>
