@@ -29,4 +29,5 @@ class GeneralLogViewController: UIViewController {
         data.setStiffness(stiffness: Int(stiffness))
         data.setGeneral(general: Int(general))
     }
+    
 }

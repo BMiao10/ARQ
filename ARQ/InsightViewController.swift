@@ -17,10 +17,22 @@ class InsightViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         medLineChart.noDataText = "Provide at least 2 data points to see chart."
         
-        let wellness = [86.0, 20.0]
-        let medLogString = ["1", "2", "3"]
-        let medLogDouble = [1.0, 2.0]
+        var wellness: [Double] = []
+        var medLogString: [String] = []
+        var medLogDouble: [Double] = []
         
+        let data = DataStorage.sharedInstance.userData
+        if (data.count < 2) {
+            // show no data text
+        }
+        
+        for dailyData in data {
+            wellness.append(Double(dailyData.getOverallValue()))
+            medLogString.append(dailyData.medications[0])
+            medLogDouble.append(Double(dailyData.doses![0]))
+        }
+        
+        print(String(describing: wellness) + String(describing: medLogString) + String(describing: medLogDouble))
         setChartData(medNames: medLogString, wellness: wellness, medLog: medLogDouble)
 
     }

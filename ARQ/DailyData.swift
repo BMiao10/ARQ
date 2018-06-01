@@ -71,8 +71,9 @@ class DailyData {
     }
     
     func calculateOverallWellness(general: Int, joints: Int, stiffness: Int) -> Int {
-        let temp = (joints + stiffness)/100
-        let value = (Double)(general - temp) + 0.1
+        let temp = Double(joints + stiffness)/100
+        print("THIS IS TEMP: \(temp)")
+        let value = Double(general) - temp + 0.1
         return Int(round(value*9.9))
     }
     
