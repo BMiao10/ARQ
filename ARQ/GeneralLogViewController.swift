@@ -21,7 +21,8 @@ class GeneralLogViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func onNextButtonClick(_ sender: Any) {
+
+    @IBAction func onNextClickButton(_ sender: Any) {
         let stiffness = round(stiffnessSlider.value)
         let general = round(generalSlider.value)
         

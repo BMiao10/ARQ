@@ -744,7 +744,7 @@
                                 <rect key="frame" x="214" y="592" width="142" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onNextClickButton:" destination="Dxg-Ne-oiy" eventType="touchUpInside" id="iJq-7V-rv3"/>
+                                    <action selector="onNextClickButton:" destination="Dxg-Ne-oiy" eventType="touchUpInside" id="Jep-Tt-767"/>
                                     <segue destination="eES-dd-nYQ" kind="show" animates="NO" id="z2W-J9-cNk"/>
                                 </connections>
                             </button>

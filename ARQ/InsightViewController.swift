@@ -22,9 +22,6 @@ class InsightViewController: UIViewController, ChartViewDelegate {
         var medLogDouble: [Double] = []
         
         let data = DataStorage.sharedInstance.userData
-        if (data.count < 2) {
-            // show no data text
-        }
         
         for dailyData in data {
             wellness.append(Double(dailyData.getOverallValue()))
